@@ -37,5 +37,16 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "yarn": "^1.22.22"
-  }
+  },
+  "description": "> Шаблонный код, boilerplate-код (англ. boilerplate code) — нетворческий программный код, который программисту приходится писать вследствие требований языка программирования, операционной системы, библиотеки подпрограмм, манеры программирования и прочего. Название «шаблонный» говорит, что он повторяется из функции в функцию, из программы в программу с минимальными изменениями. (c) _Википедия_",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katym006/katym-landing.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/katym006/katym-landing/issues"
+  },
+  "homepage": "https://github.com/katym006/katym-landing#readme"
 }
