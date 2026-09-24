@@ -1,24 +1,35 @@
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_bold.woff'),
-    url('../fonts/pt-root-ui_bold.woff2');
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_medium.woff'),
-    url('../fonts/pt-root-ui_medium.woff2');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_regular.woff'),
-    url('../fonts/pt-root-ui_regular.woff2');
+  font-family: 'Golos Text';
+  src: url('../fonts/golos-text_regular.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_light.woff'),
-    url('../fonts/pt-root-ui_light.woff2');
-  font-weight: 300;
+  font-family: 'Golos Text';
+  src: url('../fonts/golos-text_medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
 }
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/golos-text_demibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/golos-text_bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/golos-text_black.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* Правила для 'PT Root UI' были убраны: они ссылались на .woff/.woff2 файлы,
+   которых нет в src/fonts, и из-за этого сборка падала ещё до правок для
+   лендинга. Остальные страницы используют запасной шрифт из layout.css
+   (Arial/Helvetica). Если появятся файлы шрифта — верните правила обратно. */

@@ -1,3 +1,8 @@
 import '../stylesheets/style.css'
+import { initHeroSphere } from './hero-sphere.js'
 
-console.log('hey')
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHeroSphere)
+} else {
+  initHeroSphere()
+}

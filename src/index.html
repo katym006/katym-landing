@@ -3,20 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+    <title>katym.web — интерфейсы от исследования до готового продукта</title>
   </head>
   <body>
-    <h1>Главная</h1>
+    <main class="hero" id="hero">
+      <h1 class="sr-only">
+        Привет! Меня зовут Катя, я проектирую интерфейсы: от исследования до
+        готового к разработке продукта. Познакомимся поближе?
+      </h1>
 
-    <h2>Категории</h2>
-    <ul>
-      <li><a href="pages/articles.html">Статьи</a></li>
-      <li><a href="pages/tests.html">Тесты</a></li>
-      <li><a href="pages/dictionary.html">Словарь</a></li>
-    </ul>
-    <h3>Статьи</h3>
-    <a href="pages/articles/plants.html">Статья №1</a>
-    <h3>Тесты</h3>
-    <a href="pages/tests/test1.html">Тест №1</a>
+      <header class="hero__header">
+        <a class="hero__logo" href="#">katym.web</a>
+        <nav class="hero__nav">
+          <a href="pages/articles.html">портфолио</a>
+          <a href="pages/dictionary.html">инфо</a>
+          <a href="#contacts">контакты</a>
+        </nav>
+      </header>
+
+      <div class="hero__sphere" id="heroSphere">
+        <div class="hero__textwrap" aria-hidden="true">
+          <div class="hero__scene" id="heroScene">
+            <div class="hero__belt" id="heroBelt"></div>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__btn" href="#contacts">обсудим проект?</a>
+    </main>
   </body>
 </html>
