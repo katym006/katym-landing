@@ -176,13 +176,86 @@ function initHeroSphere() {
     return setTimeout(r, 1500);
   })]).then(start);
 }
+;// ./src/javascripts/cursor.js
+/**
+ * Кружок-курсор с блюром вместо системного указателя.
+ * Плавно следует за мышью и слегка увеличивается над элементами
+ * с классом .hoverable (ссылки, кнопки, карточки портфолио и т.д.).
+ * На тач-устройствах (pointer: coarse) ничего не делает.
+ */
+function initCursor() {
+  if (!matchMedia('(pointer: fine)').matches) return;
+  var dot = document.getElementById('cursorDot');
+  if (!dot) return;
+  document.documentElement.classList.add('has-custom-cursor');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var x = innerWidth / 2;
+  var y = innerHeight / 2;
+  var tx = x;
+  var ty = y;
+  var scaleDefault = 1;
+  var scaleHover = 1.5;
+  var scale = scaleDefault;
+  var tScale = scaleDefault;
+  addEventListener('pointermove', function (e) {
+    tx = e.clientX;
+    ty = e.clientY;
+    dot.classList.add('is-visible');
+    var hovering = e.target.closest && e.target.closest('.hoverable');
+    tScale = hovering ? scaleHover : scaleDefault;
+    dot.classList.toggle('is-hover', !!hovering);
+  }, {
+    passive: true
+  });
+  addEventListener('pointerleave', function () {
+    return dot.classList.remove('is-visible');
+  });
+  addEventListener('blur', function () {
+    return dot.classList.remove('is-visible');
+  });
+  function render() {
+    var ease = reduce ? 1 : 0.18;
+    x += (tx - x) * ease;
+    y += (ty - y) * ease;
+    scale += (tScale - scale) * ease;
+    dot.style.transform = "translate3d(".concat(x, "px, ").concat(y, "px, 0) scale(").concat(scale.toFixed(3), ")");
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+}
+;// ./src/javascripts/portfolio.js
+/**
+ * Кнопка «ещё!» в портфолио: показывает скрытую 4ю карточку
+ * и прячет саму кнопку, когда показывать больше нечего.
+ */
+function initPortfolioMore() {
+  var btn = document.getElementById('portfolioMore');
+  var hiddenCards = document.querySelectorAll('.portfolio__card--hidden');
+  if (!btn || !hiddenCards.length) return;
+  var i = 0;
+  btn.addEventListener('click', function () {
+    if (i >= hiddenCards.length) return;
+    var card = hiddenCards[i];
+    card.hidden = false;
+    card.classList.add('portfolio__card--reveal');
+    i += 1;
+    if (i >= hiddenCards.length) btn.hidden = true;
+  });
+}
 ;// ./src/javascripts/index.js
 
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initHeroSphere);
-} else {
+
+
+function init() {
   initHeroSphere();
+  initCursor();
+  initPortfolioMore();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
 }
 /******/ })()
 ;

@@ -13,11 +13,11 @@
       </h1>
 
       <header class="hero__header">
-        <a class="hero__logo" href="#">katym.web</a>
+        <a class="hero__logo hoverable" href="#">katym.web</a>
         <nav class="hero__nav">
-          <a href="pages/articles.html">портфолио</a>
-          <a href="pages/dictionary.html">инфо</a>
-          <a href="#contacts">контакты</a>
+          <a class="hoverable" href="#portfolio">портфолио</a>
+          <a class="hoverable" href="#info">инфо</a>
+          <a class="hoverable" href="#contacts">контакты</a>
         </nav>
       </header>
 
@@ -29,7 +29,152 @@
         </div>
       </div>
 
-      <a class="hero__btn" href="#contacts">обсудим проект?</a>
+      <a class="hero__btn hoverable" href="#contacts">обсудим проект?</a>
     </main>
+
+    <!-- ===================== UX/UI PRODUCT DESIGN ===================== -->
+    <section class="intro">
+      <h2 class="intro__title">
+        <span>UX/UI</span>
+        <span class="intro__divider" aria-hidden="true"></span>
+        <span>PRODUCT DESIGN</span>
+      </h2>
+      <p class="intro__lead">
+        Привет! Меня зовут Катя, я проектирую интерфейсы: от исследования до
+        готового к разработке продукта. Познакомимся поближе?
+      </p>
+      <a class="btn intro__btn hoverable" href="#contacts">обсудим проект?</a>
+    </section>
+
+    <!-- ============================ Портфолио =========================== -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="section-title">Портфолио</h2>
+
+      <ul class="portfolio__grid">
+        <li class="portfolio__card hoverable">
+          <img
+            src="images/signum-cover.jpg"
+            alt="Сигнум — сайт каталога оборудования пожарной сигнализации"
+            loading="lazy"
+          />
+        </li>
+        <li class="portfolio__card hoverable">
+          <img
+            src="images/chistovik-cover.jpg"
+            alt="Чистовик — мобильное приложение проверки сочинений"
+            loading="lazy"
+          />
+          <span class="portfolio__badge" aria-hidden="true">+</span>
+        </li>
+        <li class="portfolio__card hoverable">
+          <img
+            src="images/2048-cover.jpg"
+            alt="2048 — магазин предметов дизайна в стиле ретрофутуризма"
+            loading="lazy"
+          />
+        </li>
+        <li class="portfolio__card portfolio__card--hidden hoverable" hidden>
+          <img
+            src="images/netudel-cover.jpg"
+            alt="Нетудел — медиа о хобби и активном отдыхе"
+            loading="lazy"
+          />
+        </li>
+      </ul>
+
+      <button class="btn portfolio__more hoverable" type="button" id="portfolioMore">
+        ещё!
+      </button>
+    </section>
+
+    <!-- ========================= Что я умею? (бегущая строка) ===== -->
+    <section class="skills" aria-label="Что я умею">
+      <div class="skills__track">
+        <ul class="skills__row" aria-hidden="false">
+          <li class="skills__item skills__item--accent">Что я умею?</li>
+          <li class="skills__item hoverable">e-commerce</li>
+          <li class="skills__item hoverable">лендинг</li>
+          <li class="skills__item hoverable">сайт-визитка</li>
+          <li class="skills__item hoverable">блог</li>
+          <li class="skills__item hoverable">приложение</li>
+        </ul>
+        <ul class="skills__row" aria-hidden="true">
+          <li class="skills__item skills__item--accent">Что я умею?</li>
+          <li class="skills__item hoverable">e-commerce</li>
+          <li class="skills__item hoverable">лендинг</li>
+          <li class="skills__item hoverable">сайт-визитка</li>
+          <li class="skills__item hoverable">блог</li>
+          <li class="skills__item hoverable">приложение</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== Инфо =============================== -->
+    <section class="info" id="info">
+      <h2 class="section-title section-title--dark">Инфо</h2>
+      <div class="info__row">
+        <div class="info__photo">
+          <!--
+            TODO: в src/images нет фото для этого блока (в макете Figma
+            node 143:75 на его месте отдельная картинка, не одна из
+            четырёх, что лежат в репозитории). Положите файл, например,
+            src/images/katya-photo.jpg, и замените src ниже.
+          -->
+          <img
+            src="images/katya-photo-placeholder.svg"
+            alt="Екатерина Люшненко (временная заглушка — замените на фото)"
+            loading="lazy"
+          />
+        </div>
+        <div class="info__content">
+          <div class="info__heading">
+            <p class="info__name">Екатерина Люшненко</p>
+            <p class="info__role">UX/UI &amp; Product Designer</p>
+            <p class="info__city">Москва/Нижний Новгород</p>
+          </div>
+          <p class="info__bio">
+            Проектирую интерфейсы и продуктовые решения: от анализа целевой
+            аудитории до прототипов, дизайн-системы и финального интерфейса.
+          </p>
+          <ul class="info__tags">
+            <li>Figma</li>
+            <li>Tilda</li>
+            <li>Adobe Creative Suit</li>
+            <li>HTML/CSS</li>
+            <li>Claude</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= Свяжемся? ============================ -->
+    <footer class="contact" id="contacts">
+      <h2 class="contact__title">Свяжемся?</h2>
+      <ul class="contact__row">
+        <li class="contact__item">
+          <a class="hoverable" href="https://t.me/pummp_k" target="_blank" rel="noopener">
+            <svg class="contact__icon" viewBox="0 0 38 38" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M19 1a18 18 0 1 0 0 36 18 18 0 0 0 0-36Zm8.56 12.3-3.01 14.2c-.23 1-.84 1.25-1.7.78l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.94.46l.33-4.78 8.7-7.86c.38-.34-.08-.53-.59-.19l-10.76 6.77-4.63-1.45c-1-.32-1.02-1 .22-1.47l18.1-6.97c.84-.3 1.57.2 1.25 1.49Z"
+              />
+            </svg>
+            <span>@pummp_k</span>
+          </a>
+        </li>
+        <li class="contact__item">
+          <a class="hoverable" href="mailto:katymchic@gmail.com">katymchic@gmail.com</a>
+        </li>
+        <li class="contact__item">
+          <a class="hoverable" href="#" target="_blank" rel="noopener">Behance</a>
+        </li>
+        <li class="contact__item">
+          <a class="hoverable" href="#" target="_blank" rel="noopener">Dprofile</a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Кружок-курсор с блюром: см. src/javascripts/cursor.js -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
   </body>
 </html>
