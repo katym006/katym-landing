@@ -13,9 +13,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 65px;
-  height: 65px;
-  margin: -32.5px 0 0 -32.5px;
+  width: 32.5px;
+  height: 32.5px;
+  margin: -16.25px 0 0 -16.25px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 999;
