@@ -84,14 +84,16 @@
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.35s ease;
 }
-/* затемнение поверх картинки, проявляется при наведении */
+/* дуотон поверх картинки при наведении: mix-blend-mode:color красит
+   картинку в один оттенок, сохраняя её света и тени (как в 141-22) */
 .portfolio__card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(4, 0, 223, 0.18);
+  background: #2a0a8f;
+  mix-blend-mode: color;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.4s ease;
   pointer-events: none;
 }
 .portfolio__card:hover,
@@ -106,26 +108,30 @@
 .portfolio__card:focus-within::after {
   opacity: 1;
 }
+
+/* кружок-кольцо с плюсом (141-22): без заливки, белая обводка */
 .portfolio__badge {
   position: absolute;
   z-index: 2;
   top: 18px;
   right: 18px;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(242, 242, 242, 0.85);
-  color: var(--accent);
-  font-size: 26px;
-  line-height: 1;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: transparent;
+  border: 2px solid #fff;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.35);
+  color: #fff;
   opacity: 0;
   transform: scale(0.7);
   transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.portfolio__badge svg {
+  width: 26px;
+  height: 26px;
 }
 .portfolio__card:hover .portfolio__badge,
 .portfolio__card:focus-within .portfolio__badge {
