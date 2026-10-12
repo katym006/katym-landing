@@ -593,3 +593,24 @@
     width: 160px;
   }
 }
+
+
+/* Единый фон страницы по макету */
+html,
+body,
+.hero-bleed,
+.hero,
+.portfolio,
+.skills,
+.info,
+.contact {
+  background-color: #f2f2f2;
+}
+
+.contact {
+  color: var(--text-color, #000d2d);
+}
+
+.contact__item a {
+  color: var(--text-color, #000d2d);
+}
