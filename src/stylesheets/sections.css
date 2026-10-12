@@ -487,3 +487,60 @@
     height: 24px;
   }
 }
+
+
+/* Desktop refinements from the latest Figma feedback */
+@media (min-width: 821px) {
+  .portfolio,
+  .skills,
+  .info,
+  .contact {
+    margin-top: 128px;
+  }
+
+  .skills__item {
+    font-size: 32px;
+  }
+
+  .portfolio__card,
+  .portfolio__card img {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .portfolio__card::after {
+    background: #0400df;
+    mix-blend-mode: normal;
+    opacity: 0;
+    transition: none;
+  }
+
+  .portfolio__card:hover,
+  .portfolio__card:focus-within {
+    transform: none;
+  }
+
+  .portfolio__card:hover img,
+  .portfolio__card:focus-within img {
+    transform: none;
+    filter: none;
+  }
+
+  .portfolio__card:hover::after,
+  .portfolio__card:focus-within::after {
+    opacity: 0.78;
+  }
+
+  .portfolio__badge {
+    top: 18px;
+    right: 18px;
+    opacity: 0;
+    transform: none;
+    transition: none;
+  }
+
+  .portfolio__card:hover .portfolio__badge,
+  .portfolio__card:focus-within .portfolio__badge {
+    opacity: 1;
+  }
+}
