@@ -544,3 +544,37 @@
     opacity: 1;
   }
 }
+
+
+/* Uploaded brand mark in the about section */
+.info__logo-wrap {
+  width: 199px;
+  max-width: 100%;
+  margin-top: 8px;
+  align-self: flex-start;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+
+.info__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: 50% 50%;
+  animation: info-logo-spin 18s linear infinite;
+}
+
+@keyframes info-logo-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info__logo { animation: none; }
+}
+
+@media (max-width: 720px) {
+  .info__logo-wrap {
+    width: 160px;
+  }
+}
