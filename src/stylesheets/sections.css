@@ -213,6 +213,7 @@
 
 /* --------------------------------- Инфо --------------------------------- */
 .info {
+  position: relative;
   max-width: var(--container);
   margin: 0 auto;
   padding: clamp(32px, 6vw, 64px) var(--side);
@@ -548,12 +549,13 @@
 
 /* Uploaded brand mark in the about section */
 .info__logo-wrap {
-  position: relative;
+  position: absolute;
+  top: 41px;
+  right: max(20px, calc((100vw - 1164px) / 2));
   width: 199px;
   max-width: 100%;
   aspect-ratio: 199 / 171;
-  margin-top: 8px;
-  align-self: flex-start;
+  margin: 0;
   display: grid;
   place-items: center;
   overflow: visible;
@@ -590,7 +592,12 @@
 
 @media (max-width: 720px) {
   .info__logo-wrap {
+    position: relative;
+    top: auto;
+    right: auto;
     width: 160px;
+    margin-top: 8px;
+    align-self: flex-start;
   }
 }
 
