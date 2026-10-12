@@ -155,7 +155,11 @@
 }
 
 .portfolio__more {
-  width: 235px;
+  width: auto;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 24px;
+  line-height: 1.1;
 }
 .portfolio__more[hidden] {
   display: none;
@@ -395,11 +399,11 @@
   }
 
   .portfolio__more {
-    width: 100%;
+    width: auto;
     box-sizing: border-box;
-    font-size: 18px;
-    padding: 12px;
-    border-radius: 16px;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 20px;
   }
 
   .skills {
