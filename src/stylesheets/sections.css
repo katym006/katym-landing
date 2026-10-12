@@ -503,6 +503,11 @@
     font-size: 32px;
   }
 
+  /* Между бегущей строкой «Что я умею?» и блоком «Инфо» — 64 px. */
+  .info {
+    margin-top: 64px;
+  }
+
   .portfolio__card,
   .portfolio__card img {
     transition: none !important;
