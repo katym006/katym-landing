@@ -548,8 +548,10 @@
 
 /* Uploaded brand mark in the about section */
 .info__logo-wrap {
+  position: relative;
   width: 199px;
   max-width: 100%;
+  aspect-ratio: 199 / 171;
   margin-top: 8px;
   align-self: flex-start;
   display: grid;
@@ -557,12 +559,25 @@
   overflow: visible;
 }
 
-.info__logo {
+.info__logo-orbit {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   transform-origin: 50% 50%;
   animation: info-logo-spin 18s linear infinite;
+}
+
+.info__logo-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 52.76%;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes info-logo-spin {
@@ -570,7 +585,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .info__logo { animation: none; }
+  .info__logo-orbit { animation: none; }
 }
 
 @media (max-width: 720px) {
