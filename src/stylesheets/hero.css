@@ -221,3 +221,54 @@
     border-radius: 16px;
   }
 }
+
+
+/* Узкие мобильные экраны: макет до 350 px */
+@media (max-width: 350px) {
+  .hero {
+    width: 100%;
+    min-width: 0;
+    height: 620px;
+    height: min(100svh, 680px);
+    min-height: 560px;
+    overflow: hidden;
+  }
+
+  .hero__header {
+    top: 18px;
+    left: 16px;
+    right: 16px;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 13px;
+  }
+
+  .hero__logo {
+    flex: 0 0 auto;
+  }
+
+  .hero__nav {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    max-width: 205px;
+    white-space: normal;
+  }
+
+  .hero__sphere {
+    --d: min(82vw, 340px);
+    width: var(--d);
+    height: var(--d);
+    top: 47%;
+    box-shadow: 0 0 24px 2px rgba(4, 0, 223, 0.14);
+  }
+
+  .hero__btn {
+    bottom: 36px;
+    max-width: calc(100% - 32px);
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+}
