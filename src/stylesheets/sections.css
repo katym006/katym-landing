@@ -666,3 +666,24 @@ body,
     opacity: 1;
   }
 }
+
+
+/* Карточка портфолио целиком кликабельна, но визуально остаётся прежней. */
+.portfolio__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.portfolio__link > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio__link:focus-visible {
+  outline: 2px solid var(--accent, #0400df);
+  outline-offset: 4px;
+}
