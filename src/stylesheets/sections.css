@@ -609,15 +609,16 @@ body,
 .hero,
 .portfolio,
 .skills,
-.info,
-.contact {
+.info {
   background-color: #f2f2f2;
 }
 
+/* Футер сохраняет фирменный синий фон */
 .contact {
-  color: var(--text-color, #000d2d);
+  background-color: var(--accent, #0400df);
+  color: #f2f2f2;
 }
 
 .contact__item a {
-  color: var(--text-color, #000d2d);
+  color: #f2f2f2;
 }
