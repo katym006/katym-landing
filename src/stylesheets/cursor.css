@@ -10,16 +10,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 28px;
-  margin: -14px 0 0 -10px;
+  width: 32px;
+  height: 40px;
+  margin: -20px 0 0 -16px;
   pointer-events: none;
   z-index: 9999;
   color: #0400df;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 40px;
   text-align: center;
   opacity: 0;
   transform: translate3d(-100px, -100px, 0);
@@ -45,4 +45,10 @@
   .cursor-dot {
     transition: none;
   }
+}
+
+/* На синем фоне футера плюс становится белым для контраста. */
+body:has(.contact:hover) .cursor-dot,
+body:has(.contact:focus-within) .cursor-dot {
+  color: #ffffff;
 }
